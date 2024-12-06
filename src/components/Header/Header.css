@@ -1,0 +1,19 @@
+.backButton:hover, .homeButton:hover, .infoButton:hover{
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: #ff8088 !important; /* ff8088 */
+    color: white !important;
+}
+
+.custom-button {
+    background-color: #d24240; /* Color de fondo personalizado */
+    color: white; /* Color del texto */
+    border: none; /* Quita el borde */
+  }
+  
+  .custom-button:hover {
+    background-color: #ff8088; /* Color al pasar el mouse */
+    color: white; /* Mantén el texto blanco */
+  }

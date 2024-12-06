@@ -1,0 +1,66 @@
+/* Skeleton Screen Styles */
+
+.skeleton {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    animation: pulse 1.5s infinite ease-in-out, fadeIn 0.8s ease-out forwards;
+    opacity: 0;  /* Inicialmente invisible */
+    width: 100%;
+  }
+  
+  /* Animación de pulsación para simular carga */
+  @keyframes pulse {
+    0% {
+      background-color: #e0e0e0;
+    }
+    50% {
+      background-color: #d6d6d6;
+    }
+    100% {
+      background-color: #e0e0e0;
+    }
+  }
+  
+  /* Animación para que los elementos se desvanecen con suavidad */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);  /* Comienza ligeramente más pequeño */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);  /* Termina con su tamaño original */
+    }
+  }
+  
+  /* Específicos para la imagen del logo */
+  .logo {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  /* Específicos para el filtro (el rectángulo de filtros) */
+  .filtros {
+    height: 40px;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Específicos para las tarjetas de eventos */
+  .evento {
+    height: 250px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Opcional: Puedes agregar una transición para el hover */
+  .evento:hover {
+    background-color: #d1d1d1;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+  }
+  
