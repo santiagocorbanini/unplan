@@ -74,14 +74,14 @@
   }
   
   .btn-primary {
-    background-color: #f5588d !important;
-    border-color: #f5588d !important;
+    background-color: #E1585F !important;
+    border-color: #E1585F !important;
     color: #ffffff !important; /* Cambia el texto a blanco */
 }
 .btn-outline-primary {
     background-color: #ffffff !important;
-    border-color: #f5588d !important;
-    color: #f5588d !important; /* Cambia el texto a blanco */
+    border-color: #E1585F !important;
+    color: #E1585F !important; /* Cambia el texto a blanco */
 }
 
 .btn-group>.btn {

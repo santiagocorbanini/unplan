@@ -8,6 +8,7 @@ import SkeletonScreen from '../components/SkeletonScreen';
 
 const HomeView = () => {
     const [filtro, setFiltro] = useState('todos');
+    const [fechaSeleccionada, setFechaSeleccionada] = useState('');
 
     const { data: eventosData, isLoading, error } = useQuery({
         queryKey: ['eventos'],
@@ -15,8 +16,13 @@ const HomeView = () => {
     });
 
     const eventosFiltrados = eventosData?.filter(evento => {
-        if (filtro === 'todos') return true;
-        return evento.categoria === filtro;
+        const cumpleFiltro =
+            filtro === 'todos' || evento.categoria === filtro;
+
+        const cumpleFecha = !fechaSeleccionada || (evento.event_date &&
+            new Date(evento.event_date).toISOString().split('T')[0] === fechaSeleccionada);
+
+        return cumpleFiltro && cumpleFecha;
     });
 
     if (isLoading) {
@@ -37,6 +43,16 @@ const HomeView = () => {
                     className="d-block mx-auto rounded-circle"
                 />
                 <Filtros setFiltro={setFiltro} filtroActual={filtro} />
+                <div className="text-center my-3">
+                    <label htmlFor="fecha" className="mb-2">Buscar por fecha:</label>
+                    <input
+                        type="date"
+                        id="fecha"
+                        className="form-control w-auto mx-auto"
+                        value={fechaSeleccionada}
+                        onChange={e => setFechaSeleccionada(e.target.value)}
+                    />
+                </div>
                 <Row xs={1} md={2} lg={3} className="g-4">
                     {eventosFiltrados?.map((evento, index) => (
                         <Col key={index}>
