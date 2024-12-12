@@ -6,7 +6,7 @@ const api = axios.create({
 
 export const fetchEventos = async () => {
   try {
-    const response = await api.get("/shows");
+    const response = await api.get("/shows/actualShows");
     return response.data;
   } catch (error) {
     console.error("Error fetching events:", error);

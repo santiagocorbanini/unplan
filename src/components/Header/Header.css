@@ -11,6 +11,7 @@
     background-color: #d24240; /* Color de fondo personalizado */
     color: white; /* Color del texto */
     border: none; /* Quita el borde */
+    margin-left: 10px;
   }
   
   .custom-button:hover {
