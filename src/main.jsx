@@ -1,11 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./src/styles/index.css";
-import RoutesApp from "./src/routes/Routes";
-import Footer from "./src/components/Footer/Footer";
+import "./styles/index.css";
+import RoutesApp from "./routes/Routes";
+import Footer from "./components/Footer/Footer";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import InfoFooter from './src/components/InfoFooter/InfoFooter';
+import InfoFooter from './components/InfoFooter/InfoFooter';
 
 const queryClient = new QueryClient()
 
