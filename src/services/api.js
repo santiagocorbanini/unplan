@@ -6,7 +6,6 @@ const api = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
-  withCredentials: true, // Permite el envío de cookies y cabeceras de autenticación
 });
 
 export const fetchEventos = async () => {
