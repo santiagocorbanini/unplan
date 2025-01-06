@@ -1,12 +1,12 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_APP_API_URL,
-  timeout: 10000,
+  baseURL: import.meta.env.VITE_APP_API_URL, // URL base definida en .env
+  timeout: 10000, // Tiempo de espera de 10 segundos
   headers: {
     "Content-Type": "application/json",
   },
-  withCredentials: true, // Asegura el envío de cookies entre cliente y servidor
+  withCredentials: true, // Permite el envío de cookies y cabeceras de autenticación
 });
 
 export const fetchEventos = async () => {
@@ -14,7 +14,17 @@ export const fetchEventos = async () => {
     const response = await api.get("/shows/actualShows");
     return response.data;
   } catch (error) {
-    console.error("Error fetching events:", error);
+    if (error.response) {
+      console.error(
+        "Error en la respuesta del servidor:",
+        error.response.status,
+        error.response.data
+      );
+    } else if (error.request) {
+      console.error("No se recibió respuesta del servidor:", error.request);
+    } else {
+      console.error("Error al configurar la solicitud:", error.message);
+    }
     throw error;
   }
 };
