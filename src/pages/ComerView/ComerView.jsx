@@ -8,14 +8,14 @@ const restaurantes = [
         nombre: "Restaurante Uno",
         instagram: "@restauranteuno",
         direccion: "Calle Falsa 123",
-        logo: "./../../../public/unplan-logo.jpg"
+        logo: "/public/unplan-logo.jpg"
     },
     {
         id: 2,
         nombre: "Restaurante Dos",
         instagram: "@restaurantedos",
         direccion: "Avenida Siempre Viva 456",
-        logo: "./../../../public/unplan-logo.jpg"
+        logo: "/public/unplan-logo.jpg"
     },
     {
         id: 3,
