@@ -8,7 +8,7 @@ const boliches = [
         nombre: "boliche Uno",
         instagram: "@bolicheuno",
         direccion: "Calle Falsa 123",
-        logo: "./../../../public/unplan-logo.jpg"
+        logo: "unplan-logo.jpg"
     },
     {
         id: 2,
