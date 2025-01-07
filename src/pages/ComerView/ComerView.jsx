@@ -8,7 +8,7 @@ const restaurantes = [
         nombre: "Restaurante Uno",
         instagram: "@restauranteuno",
         direccion: "Calle Falsa 123",
-        logo: "/public/unplan-logo.jpg"
+        logo: "/unplan-logo.jpg"
     },
     {
         id: 2,
