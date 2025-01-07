@@ -35,7 +35,7 @@ const HomeView = () => {
 
     return (
         <div className="min-vh-100">
-            <Container className="py-5 justify-items-center">
+            <Container className="py-3 justify-items-center">
                 <img
                     src="/src/assets/unplan-logo.jpg"
                     width="130"
