@@ -25,8 +25,10 @@ const InfoView = () => {
                         <h2>Atractivos turísticos</h2>
                         <ul>
                             <li>Parque Natural Laguna de Gómez</li>
-                            <li>Museo de Historia Natural</li>
+                            <li>Parque Municipal Borchex</li>
                             <li>Plaza 25 de Mayo</li>
+                            <li>Plaza 9 de Julio</li>
+                            <li>Laguna El Carpincho</li>
                         </ul>
                     </Col>
                     <Col md={6}>
@@ -36,12 +38,12 @@ const InfoView = () => {
                 </Row>
                 <Row>
                     <Col md={6}>
-                        <h2>Recomendaciones de seguridad</h2>
-                        <p>Mantén tus pertenencias seguras y utiliza taxis autorizados.</p>
-                    </Col>
-                    <Col md={6}>
-                        <h2>Eventos y festivales</h2>
-                        <p>Consulta la agenda local para eventos culturales y festivales.</p>
+                        <h2>Taxis</h2>
+                        <ul>
+                            <li>Avenidad</li>
+                            <li>Centro</li>
+                            <li>Plaza Alem</li>
+                        </ul>
                     </Col>
                 </Row>
             </Container>

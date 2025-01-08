@@ -1,0 +1,58 @@
+export const hoteles = [
+  {
+    id: 1,
+    nombre: "Copahue",
+    instagram: "@hotel.copahue",
+    direccion: "Cornelio Saavedra 80",
+    logo: "/unplan/hoteles/copahue.jpg",
+  },
+  {
+    id: 2,
+    nombre: "Cerrito Colorado",
+    instagram: "@hotelcerritocoloradojunin",
+    direccion: "Ruta 65 km 79",
+    logo: "/unplan/hoteles/cerritocolorado.jpg",
+  },
+  {
+    id: 3,
+    nombre: "Piedramora",
+    instagram: "@hotelpiedramora",
+    direccion: "Ruta 7 km 255",
+    logo: "/unplan/hoteles/piedramora.jpg",
+  },
+  {
+    id: 4,
+    nombre: "Arena Ranch",
+    instagram: "@arenaranchhotel",
+    direccion: "Ruta 7 km 258",
+    logo: "/unplan/hoteles/arenaranch.jpg",
+  },
+  {
+    id: 5,
+    nombre: "Casa Viva",
+    instagram: "@casavivahotelboutique",
+    direccion: "Cabrera 221",
+    logo: "/unplan/hoteles/casaviva.jpg",
+  },
+  {
+    id: 6,
+    nombre: "Hostel Junin",
+    instagram: "@hosteljunin",
+    direccion: "Jorge Newbery 77",
+    logo: "/unplan/hoteles/hosteljunin.jpg",
+  },
+  {
+    id: 7,
+    nombre: "Avenida",
+    instagram: "@hotelavenidajunin",
+    direccion: "Av. Arias 33",
+    logo: "/unplan/hoteles/avenida.jpg",
+  },
+  {
+    id: 8,
+    nombre: "Colón",
+    instagram: "@colonhotel",
+    direccion: "Colón 144",
+    logo: "/unplan/hoteles/colon.jpg",
+  },
+];
