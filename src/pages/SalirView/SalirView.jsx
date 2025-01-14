@@ -16,7 +16,14 @@ const SalirView = () => {
                                 <Card.Body>
                                     <Card.Title className="font-weight-bold">{boliche.nombre}</Card.Title>
                                     <Card.Text>
-                                        {boliche.instagram}<br />
+                                        <a
+                                            href={`https://www.instagram.com/${boliche.instagram}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="link-black"
+                                        >
+                                            @{boliche.instagram}
+                                        </a><br />
                                         {boliche.direccion}
                                     </Card.Text>
                                 </Card.Body>

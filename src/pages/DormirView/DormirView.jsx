@@ -16,7 +16,14 @@ const DormirView = () => {
                                 <Card.Body>
                                     <Card.Title className="font-weight-bold">{hotel.nombre}</Card.Title>
                                     <Card.Text>
-                                        {hotel.instagram}<br />
+                                        <a
+                                            href={`https://www.instagram.com/${hotel.instagram}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="link-black"
+                                        >
+                                            @{hotel.instagram}
+                                        </a><br />
                                         {hotel.direccion}
                                     </Card.Text>
                                 </Card.Body>

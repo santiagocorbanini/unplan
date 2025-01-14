@@ -8,3 +8,13 @@
 .no-border {
     border: none !important; /* Elimina el borde */
 }
+
+.link-black {
+    color: black !important; 
+    
+}
+
+.link-black:hover {
+    color: #f5588d !important; 
+    text-decoration: underline; 
+}

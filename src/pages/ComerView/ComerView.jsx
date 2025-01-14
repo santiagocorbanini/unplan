@@ -16,7 +16,14 @@ const ComerView = () => {
                                 <Card.Body>
                                     <Card.Title className="font-weight-bold">{restaurante.nombre}</Card.Title>
                                     <Card.Text>
-                                        {restaurante.instagram}<br />
+                                        <a
+                                            href={`https://www.instagram.com/${restaurante.instagram}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="link-black"
+                                        >
+                                            @{restaurante.instagram}
+                                        </a><br />
                                         {restaurante.direccion}
                                     </Card.Text>
                                 </Card.Body>
