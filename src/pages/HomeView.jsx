@@ -16,11 +16,16 @@ const HomeView = () => {
     });
 
     const eventosFiltrados = eventosData?.filter(evento => {
-        const cumpleFiltro =
-            filtro === 'todos' || evento.categoria === filtro;
+        console.log("santi ", evento);
 
-        const cumpleFecha = !fechaSeleccionada || (evento.event_date &&
-            new Date(evento.event_date).toISOString().split('T')[0] === fechaSeleccionada);
+        const cumpleFiltro =
+            filtro === 'todos' ||
+            (Array.isArray(evento.categories) &&
+                evento.categories.some(cat => cat.toLowerCase() === filtro.toLowerCase()));
+
+        const cumpleFecha = !fechaSeleccionada ||
+            (evento.event_date &&
+                new Date(evento.event_date).toISOString().split('T')[0] === fechaSeleccionada);
 
         return cumpleFiltro && cumpleFecha;
     });
