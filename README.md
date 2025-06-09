@@ -10,3 +10,8 @@ Currently, two official plugins are available:
 # unplan
 
 VITE_APP_API_URL='https://149.50.146.27:3127'
+
+hacer :
+
+npm run build 
+npm run deploy

@@ -5,6 +5,7 @@ import Filtros from '../components/Filtros';
 import { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import SkeletonScreen from '../components/SkeletonScreen';
+import unplanLogo from './../assets/unplan-logo.jpg'; // Asegúrate de que la ruta sea correcta
 
 const HomeView = () => {
     const [filtro, setFiltro] = useState('todos');
@@ -42,7 +43,7 @@ const HomeView = () => {
         <div className="min-vh-100">
             <Container className="py-3 justify-items-center">
                 <img
-                    src="/src/assets/unplan-logo.jpg"
+                    src={unplanLogo}
                     width="130"
                     alt="Logo"
                     className="d-block mx-auto rounded-circle"
