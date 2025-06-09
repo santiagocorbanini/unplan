@@ -17,6 +17,7 @@ const EventoCard = ({ evento }) => (
         <Card.Header className="bg-white">
             <Card.Title>{evento.title}</Card.Title>
             <Card.Subtitle className="mb-2 text-muted">{formatDate(evento.event_date)}</Card.Subtitle>
+            <Card.Subtitle className="mb-2 text-muted">{evento.venue}</Card.Subtitle>
         </Card.Header>
         <Card.Body>
             <Card.Img variant="top" width={100} src={`data:image/jpg;base64,${btoa(
@@ -24,13 +25,17 @@ const EventoCard = ({ evento }) => (
             )}`} alt={evento.titulo} />
         </Card.Body>
         <Card.Footer className="d-flex justify-content-between bg-white">
-            <Button variant="outline-primary" href={evento.instagramLink} target="_blank" rel="noopener noreferrer">
-                <Instagram size={18} className="me-2" />
-                Instagram
-            </Button>
-            <Button variant="primary" href={evento.compraLink} target="_blank" rel="noopener noreferrer">
-                Comprar Entradas
-            </Button>
+            {evento.compraLink && (
+                <Button variant="outline-primary" href={evento.instagramLink} target="_blank" rel="noopener noreferrer">
+                    <Instagram size={18} className="me-2" />
+                    Instagram
+                </Button>
+            )}
+            {evento.compraLink && (
+                <Button variant="primary" href={evento.compraLink} target="_blank" rel="noopener noreferrer">
+                    Comprar Entradas
+                </Button>
+            )}
         </Card.Footer>
     </Card>
 );
