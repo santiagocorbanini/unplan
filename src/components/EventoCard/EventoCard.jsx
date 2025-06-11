@@ -31,8 +31,8 @@ const EventoCard = ({ evento }) => (
                     Instagram
                 </Button>
             )}
-            {evento.compraLink && (
-                <Button variant="primary" href={evento.compraLink} target="_blank" rel="noopener noreferrer">
+            {evento.url && (
+                <Button variant="primary" href={evento.url} target="_blank" rel="noopener noreferrer">
                     Comprar Entradas
                 </Button>
             )}
