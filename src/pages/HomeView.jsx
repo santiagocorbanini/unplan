@@ -16,20 +16,20 @@ const HomeView = () => {
         queryFn: fetchEventos,
     });
 
-    const eventosFiltrados = eventosData?.filter(evento => {
-        console.log("santi ", evento);
+    const eventosFiltrados = Array.isArray(eventosData?.data)
+        ? eventosData.data.filter(evento => {
+            const cumpleFiltro =
+                filtro === 'todos' ||
+                (Array.isArray(evento.categories) &&
+                    evento.categories.some(cat => cat.toLowerCase() === filtro.toLowerCase()));
 
-        const cumpleFiltro =
-            filtro === 'todos' ||
-            (Array.isArray(evento.categories) &&
-                evento.categories.some(cat => cat.toLowerCase() === filtro.toLowerCase()));
+            const cumpleFecha = !fechaSeleccionada ||
+                (evento.event_date &&
+                    new Date(evento.event_date).toISOString().split('T')[0] === fechaSeleccionada);
 
-        const cumpleFecha = !fechaSeleccionada ||
-            (evento.event_date &&
-                new Date(evento.event_date).toISOString().split('T')[0] === fechaSeleccionada);
-
-        return cumpleFiltro && cumpleFecha;
-    });
+            return cumpleFiltro && cumpleFecha;
+        })
+        : [];
 
     if (isLoading) {
         return <SkeletonScreen />;

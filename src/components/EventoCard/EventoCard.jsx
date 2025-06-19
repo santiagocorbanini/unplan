@@ -20,9 +20,12 @@ const EventoCard = ({ evento }) => (
             <Card.Subtitle className="mb-2 text-muted">{evento.venue}</Card.Subtitle>
         </Card.Header>
         <Card.Body>
-            <Card.Img variant="top" width={100} src={`data:image/jpg;base64,${btoa(
-                new Uint8Array(evento.flyer.data).reduce((data, byte) => data + String.fromCharCode(byte), "")
-            )}`} alt={evento.titulo} />
+            <Card.Img
+                variant="top"
+                width={100}
+                src={evento.image_url || '/path/to/placeholder.png'}
+                alt={evento.title || 'Flyer'}
+            />
         </Card.Body>
         <Card.Footer className="d-flex justify-content-between bg-white">
             {evento.compraLink && (
