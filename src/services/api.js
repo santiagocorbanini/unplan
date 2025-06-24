@@ -8,7 +8,7 @@ const api = axios.create({
 
 export const fetchEventos = async () => {
   try {
-    const response = await api.get("/shows/actualShows");
+    const response = await api.get("/shows/actualShows?page=1");
     return response.data;
   } catch (error) {
     if (error.response) {
